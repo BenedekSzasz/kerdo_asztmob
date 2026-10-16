@@ -1,4 +1,4 @@
 /target
 *.jar
 *.class
-*.csv
+tasks.csv

@@ -77,7 +77,11 @@ public class MainController {
 
     @FXML
     void onClickSaveButton(ActionEvent event) {
+        startSave();
+    }
 
+    void startSave() {
+        
     }
 
 }

@@ -1,2 +1,1 @@
-TODO: Jegyezze meg a következő és előző gomb után a választást
-TODO: Az előző és következő gombra töltse vissza a választ
+TODO: A fájlba nem UTF-8 kódolva íródik a szöveg (ékezetek)

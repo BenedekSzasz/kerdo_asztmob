@@ -71,7 +71,7 @@ public class MainController {
             answerList.set(actualIndex, getSelectedNum());
             actualIndex ++;
             loadTask(actualIndex);
-
+            setActualState();
 
         }
     }
@@ -86,6 +86,7 @@ public class MainController {
             answerList.set(actualIndex, getSelectedNum());
             actualIndex --;
             loadTask(actualIndex);
+            setActualState();
         }
     }
 

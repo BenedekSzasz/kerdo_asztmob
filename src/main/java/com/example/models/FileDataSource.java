@@ -37,7 +37,7 @@ public class FileDataSource implements DataSource {
 
     private Task makeTask(String line) {
         String[] parts = line.split(":");
-        if (parts.length == 7) {
+        if (parts.length != 7) {
             throw new RuntimeException("Hiba! Nincs 7 mező!");
         }
 

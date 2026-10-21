@@ -31,6 +31,9 @@ public class MainController {
     @FXML
     private TextField questionField;
 
+    @FXML
+    private TextField nameField;
+
     List<Task> taskList;
     int actualIndex = 0;
     List<Integer> answerList = new ArrayList<>();
@@ -98,6 +101,8 @@ public class MainController {
     void startSave() {
         answerList.set(actualIndex, getSelectedNum());
         System.out.println(answerList);
+        String name = nameField.getText();
+        
     }
 
     int getSelectedNum() {

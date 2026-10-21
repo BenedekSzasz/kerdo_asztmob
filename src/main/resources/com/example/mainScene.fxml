@@ -7,22 +7,23 @@
 <?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.Pane?>
 
-
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.controllers.MainController">
    <children>
-      <Label layoutX="286.0" layoutY="14.0" text="Label" />
-      <TextField fx:id="questionField" layoutX="63.0" layoutY="85.0" prefHeight="25.0" prefWidth="491.0" />
-      <TextField fx:id="idField" layoutX="63.0" layoutY="48.0" prefHeight="25.0" prefWidth="40.0" />
+      <Label layoutX="286.0" layoutY="14.0" text="Feladat" />
+      <TextField fx:id="questionField" layoutX="54.0" layoutY="118.0" prefHeight="25.0" prefWidth="491.0" />
+      <TextField fx:id="idField" layoutX="54.0" layoutY="83.0" prefHeight="25.0" prefWidth="40.0" />
       <RadioButton fx:id="answerRadio_01" layoutX="60.0" layoutY="157.0" mnemonicParsing="false" text="RadioButton">
          <toggleGroup>
             <ToggleGroup fx:id="answers" />
          </toggleGroup>
       </RadioButton>
-      <RadioButton fx:id="answerRadio_02" layoutX="467.0" layoutY="157.0" mnemonicParsing="false" text="RadioButton" toggleGroup="$answers" />
+      <RadioButton fx:id="answerRadio_02" layoutX="424.0" layoutY="157.0" mnemonicParsing="false" text="RadioButton" toggleGroup="$answers" />
       <RadioButton fx:id="answerRadio_03" layoutX="60.0" layoutY="233.0" mnemonicParsing="false" text="RadioButton" toggleGroup="$answers" />
-      <RadioButton fx:id="answerRadio_04" layoutX="467.0" layoutY="233.0" mnemonicParsing="false" text="RadioButton" toggleGroup="$answers" />
+      <RadioButton fx:id="answerRadio_04" layoutX="424.0" layoutY="233.0" mnemonicParsing="false" text="RadioButton" toggleGroup="$answers" />
       <Button layoutX="57.0" layoutY="329.0" mnemonicParsing="false" onAction="#onClickPrevButton" text="Előző" />
       <Button layoutX="483.0" layoutY="329.0" mnemonicParsing="false" onAction="#onClickNextButton" text="Következő" />
       <Button layoutX="283.0" layoutY="329.0" mnemonicParsing="false" onAction="#onClickSaveButton" text="Mentés" />
+      <Label layoutX="14.0" layoutY="14.0" text="Név" />
+      <TextField fx:id="nameField" layoutX="57.0" layoutY="10.0" />
    </children>
 </Pane>

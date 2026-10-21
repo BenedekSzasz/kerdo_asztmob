@@ -2,6 +2,7 @@ package com.example.models;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -50,6 +51,32 @@ public class FileDataSource implements DataSource {
         task.setAnswer4(parts[5]);
         task.setCorrect(parts[6]);
         return task;
+    }
+
+    @Override
+    public void writeAnswers(Answer answer) {
+        try {
+            tryWriteAnswers(answer);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void tryWriteAnswers(Answer answer) throws FileNotFoundException {
+        PrintWriter printWriter = new PrintWriter("answers.txt");
+        String line = answer.name + makeStringAnswer(answer.answerList);
+        printWriter.write(line);
+        printWriter.write("\n");
+        printWriter.close();
+    }
+
+    private String makeStringAnswer(List<Integer> answerList) {
+        StringBuffer sb = new StringBuffer();
+        for(Integer num : answerList) {
+            sb.append(num);
+            sb.append(":");
+        }
+        return sb.toString();
     }
 
 }
